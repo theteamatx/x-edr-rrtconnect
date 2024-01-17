@@ -10,7 +10,7 @@ cc_library(
         "binary_search.h",
     ],
     deps = [
-        "@eigenmath//eigenmath",
+        "@x_edr_eigenmath//eigenmath",
     ],
 )
 
@@ -40,14 +40,14 @@ cc_library(
         "rrt_connect.h",
     ],
     deps = [
-        "@boost//:graph",
+        "@boost.graph",
         "@com_google_absl//absl/container:flat_hash_set",
         "@com_google_absl//absl/container:node_hash_set",
         "@com_google_absl//absl/log",
         "@com_google_absl//absl/time",
         "@com_google_absl//absl/types:optional",
-        "@eigenmath//eigenmath",
-        "@eigenmath//eigenmath:quasi_random_vector",
+        "@x_edr_eigenmath//eigenmath",
+        "@x_edr_eigenmath//eigenmath:quasi_random_vector",
     ],
 )
 
@@ -60,7 +60,7 @@ cc_test(
         ":path_metric",
         ":rrt",
         "@com_google_googletest//:gtest_main",
-        "@eigenmath//eigenmath",
+        "@x_edr_eigenmath//eigenmath",
     ],
 )
 
@@ -70,6 +70,6 @@ cc_test(
     deps = [
         ":binary_search",
         "@com_google_googletest//:gtest_main",
-        "@eigenmath//eigenmath",
+        "@x_edr_eigenmath//eigenmath",
     ],
 )
