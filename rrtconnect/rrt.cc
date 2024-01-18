@@ -119,10 +119,8 @@ RRT::ExtendResult RRT::Impl::Connect(const Vertex &q,
                                      const ValidationFunction &validity_func) {
   ExtendResult r;
   r.vertex_desc = NearestNeighbor(q);
-  int extend_count = 0;
   do {
     r = Extend(q, r.vertex_desc, validity_func);
-    ++extend_count;
   } while (r.extend_code == ExtendCode::kAdvanced);
   return r;
 }

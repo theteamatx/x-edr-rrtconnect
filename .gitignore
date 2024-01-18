@@ -1,4 +1,2 @@
-bazel-bin
-bazel-out
-bazel-rrtconnect
-bazel-testlogs
+*~
+bazel-*
